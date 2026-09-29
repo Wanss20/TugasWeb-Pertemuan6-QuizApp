@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kuis Web Dasar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <h1>Kuis Web Dasar</h1>
+      <button id="theme-toggle" type="button" aria-label="Ganti mode gelap/terang">Mode gelap</button>
+    </header>
+
+    <!-- Layar 1: Mulai -->
+    <section id="screen-start" class="screen active">
+      <p class="lead">Jawab 8 pertanyaan tentang HTML, CSS, dan JavaScript. Setiap soal punya waktu 15 detik.</p>
+      <p class="best">Skor tertinggi: <strong id="start-high">0</strong> / 8</p>
+      <button id="btn-start" class="btn primary" type="button">Mulai kuis</button>
+    </section>
+
+    <!-- Layar 2: Kuis -->
+    <section id="screen-quiz" class="screen">
+      <div class="meta">
+        <span id="q-counter"></span>
+        <span id="timer" class="timer"></span>
+      </div>
+      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      <div id="question-box" class="question-box"></div>
+      <button id="btn-next" class="btn primary" type="button" hidden>Lanjut</button>
+    </section>
+
+    <!-- Layar 3: Hasil -->
+    <section id="screen-result" class="screen">
+      <h2>Kuis selesai</h2>
+      <p class="score"><span id="final-score">0</span> / <span id="total-q">0</span></p>
+      <p id="result-msg"></p>
+      <p class="best">Skor tertinggi: <strong id="result-high">0</strong></p>
+      <button id="btn-restart" class="btn primary" type="button">Ulangi kuis</button>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
